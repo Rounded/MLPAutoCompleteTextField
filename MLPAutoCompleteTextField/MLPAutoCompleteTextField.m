@@ -832,6 +832,7 @@ withAutoCompleteString:(NSString *)string
     frame.origin.x += textField.autoCompleteTableOriginOffset.width;
     frame.origin.y += textField.autoCompleteTableOriginOffset.height;
     frame = CGRectInset(frame, 1, 0);
+    frame.size.height = MAX(120, frame.size.height);
     
     return frame;
 }
@@ -1126,4 +1127,3 @@ withAutoCompleteString:(NSString *)string
     [self setPossibleCompletions:nil];
 }
 @end
-
